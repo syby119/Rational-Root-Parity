@@ -96,7 +96,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC "src")
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Eigen3::Eigen)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC gmp::gmp)
+target_include_directories(${PROJECT_NAME} PUBLIC ${GMP_INCLUDE_DIR})
+target_link_libraries(${PROJECT_NAME} PUBLIC ${GMP_LIBRARIES})
 
 
 
